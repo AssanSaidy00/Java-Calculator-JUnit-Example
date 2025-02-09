@@ -20,8 +20,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Compile the project
-      run: javac -d bin -cp src src/com/example/Calculator.java src/com/example/CalculatorTest.java
+    - name: Compile Java classes
+      run: javac -d bin src/com/example/*.java
 
     - name: Run JUnit tests
       run: java -cp bin org.junit.runner.JUnitCore com.example.CalculatorTest
